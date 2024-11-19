@@ -3,7 +3,7 @@
 # Description: OpenWrt_Build_2305_x64 DIY script part 1
 # File name: 2305_x64_soot_diy-part1.sh
 # Lisence: MIT
-# By: e5sub
+# By: CAIYA
 #===============================================
 
 # Add a feed source
