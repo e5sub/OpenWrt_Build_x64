@@ -1,20 +1,20 @@
 <div align="center">
-<img width="768" src="https://github.com/gxnas/OpenWrt_Build_x64/blob/main/personal/logo.png"/>
+<img width="768" src="https://github.com/e5sub/OpenWrt_Build_x64/blob/main/personal/logo.png"/>
 <h1>OpenWrt_Build_x64</h1>
 </div>
 
 ## 当前编译状态：
 |    序号    |     架构名称    |    编译状态    |    固件下载    |
 | :-----------------: | :-------------: |:-----------------: | :-----------------: |
-| 1 |OpenWrt_2305_x64_全功能版|<a href="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_all.yml"><img src="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_all.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_all)|
-| 2 |OpenWrt_2305_x64_主路由版|<a href="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_wjq.yml"><img src="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_wjq.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_wjq)|
-| 3 |OpenWrt_2305_x64_旁路由版|<a href="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_gxnas.yml"><img src="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_gxnas.yml/badge.svg?style=flat" /></a>|[下载地址](https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_gxnas)|
-| 4 |OpenWrt_2305_x64_精简版|<a href="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_soot.yml"><img src="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_soot.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_soot)|
-| 5 |OpenWrt_2305_x64_测试版|<a href="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_test.yml"><img src="https://github.com/gxnas/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_test.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_test)|
+| 1 |OpenWrt_2305_x64_全功能版|<a href="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_all.yml"><img src="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_all.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_all)|
+| 2 |OpenWrt_2305_x64_主路由版|<a href="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_wjq.yml"><img src="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_wjq.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_wjq)|
+| 3 |OpenWrt_2305_x64_旁路由版|<a href="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_e5sub.yml"><img src="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_e5sub.yml/badge.svg?style=flat" /></a>|[下载地址](https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_e5sub)|
+| 4 |OpenWrt_2305_x64_精简版|<a href="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_soot.yml"><img src="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_soot.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_soot)|
+| 5 |OpenWrt_2305_x64_测试版|<a href="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_test.yml"><img src="https://github.com/e5sub/OpenWrt_Build_x64/actions/workflows/OpenWrt_Build_2305_x64_test.yml/badge.svg?style=flat" /></a>    |[下载地址](https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/OpenWrt_2305_x64_test)|
 
 </br>
 
-## 项目说明 [![](https://github.com/gxnas/OpenWrt_Build_x64/blob/main/personal/describes.svg)](#项目说明-)
+## 项目说明 [![](https://github.com/e5sub/OpenWrt_Build_x64/blob/main/personal/describes.svg)](#项目说明-)
 - 固件来源：[![Lean](https://img.shields.io/badge/Lede-Lean-red.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) 
 - 项目使用 Github Actions 拉取 [Lean](https://github.com/coolsnowwolf/lede) 的 `Openwrt` 源码仓库进行云编译
 - 🔴[OpenWrt_2305_x64_全功能版] 固件默认的IP地址：`192.168.18.1` 默认密码：`无密码`
@@ -38,7 +38,7 @@
 ----
 
 
-## 插件预览 [![](https://github.com/gxnas/OpenWrt_Build_x64/blob/main/personal/preview.svg)](#插件预览-)
+## 插件预览 [![](https://github.com/e5sub/OpenWrt_Build_x64/blob/main/personal/preview.svg)](#插件预览-)
 <details>
 <summary><b>&nbsp; OpenWrt_2305_x64 插件预览</b></summary>
 <br/>
@@ -148,12 +148,12 @@
 
 #### 4、所有版本默认用户名：root，无密码，登录后请立即设置密码；
 
-#### 5、如果需要更改Openwrt默认的IP，可以用root登录SSH下输入命令 vi /etc/config/network 修改文件，需要注意的是，在SSH界面下看到有root@OpenWrt-GXNAS:/#开头的字样方可操作；
+#### 5、如果需要更改Openwrt默认的IP，可以用root登录SSH下输入命令 vi /etc/config/network 修改文件，需要注意的是，在SSH界面下看到有root@OpenWrt-e5sub:/#开头的字样方可操作；
 
 #### 6、安装硬盘不可低于1G；
 
 #### 7、虚拟机安装的，请确保文件名和路径没有中文或者特殊符号，否则转换文件时有可能转换不成功。
 
 <a href="#readme">
-<img src="https://github.com/gxnas/OpenWrt_Build_x64/blob/main/personal/return.svg" title="返回顶部" align="right"/>
+<img src="https://github.com/e5sub/OpenWrt_Build_x64/blob/main/personal/return.svg" title="返回顶部" align="right"/>
 </a>

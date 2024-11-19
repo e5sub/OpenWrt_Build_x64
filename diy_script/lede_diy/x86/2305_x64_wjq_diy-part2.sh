@@ -3,7 +3,7 @@
 # Description: 2305_x64_wjq DIY script part 2
 # File name: 2305_x64_wjq_diy-part2.sh
 # Lisence: MIT
-# By: GXNAS
+# By: e5sub
 #===============================================
 
 echo "开始 DIY2 配置……"
@@ -16,8 +16,8 @@ source $GITHUB_WORKSPACE/diy_script/function.sh
 rm -rf package/custom; mkdir package/custom
 
 # 修改主机名字，修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-GXNAS'" package/lean/default-settings/files/zzz-default-settings
-sed -i "s/hostname='.*'/hostname='OpenWrt-GXNAS'/g" ./package/base-files/files/bin/config_generate
+sed -i "/uci commit system/i\uci set system.@system[0].hostname='OpenWrt-e5sub'" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/hostname='.*'/hostname='OpenWrt-e5sub'/g" ./package/base-files/files/bin/config_generate
 
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.18.1/g' package/base-files/files/bin/config_generate
@@ -75,13 +75,13 @@ cp -f $GITHUB_WORKSPACE/personal/bg1.jpg package/luci-theme-argon/htdocs/luci-st
 
 # 显示增加编译时间
 sed -i "s/DISTRIB_REVISION='R[0-9]\+\.[0-9]\+\.[0-9]\+'/DISTRIB_REVISION='@R$build_date'/g" package/lean/default-settings/files/zzz-default-settings
-sed -i 's/LEDE/OpenWrt_2305_x64_主路由版 by GXNAS build/g' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/LEDE/OpenWrt_2305_x64_主路由版 by e5sub build/g' package/lean/default-settings/files/zzz-default-settings
 
 # 修改右下角脚本版本信息
-sed -i 's/<a class=\"luci-link\" href=\"https:\/\/github.com\/openwrt\/luci\" target=\"_blank\">Powered by <%= ver.luciname %> (<%= ver.luciversion %>)<\/a>/OpenWrt_2305_x64_主路由版 by GXNAS build @R'"$build_date"'/' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
-sed -i 's|<a href="https://github.com/jerrykuku/luci-theme-argon" target="_blank">ArgonTheme <%# vPKG_VERSION %></a>|<a class="luci-link" href="https://wp.gxnas.com" target="_blank">🌐固件编译者：【GXNAS博客】</a>|' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
-sed -i 's|<%= ver.distversion %>|<a href="https://d.gxnas.com" target="_blank">👆点这里下载最新版本</a>|' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
-sed -i "/<a class=\"luci-link\"/d; /<a href=\"https:\/\/github.com\/jerrykuku\/luci-theme-argon\"/d; s|<%= ver.distversion %>|OpenWrt_2305_x64_主路由版 by GXNAS build @R$build_date|" package/luci-theme-argon/luasrc/view/themes/argon/footer_login.htm
+sed -i 's/<a class=\"luci-link\" href=\"https:\/\/github.com\/openwrt\/luci\" target=\"_blank\">Powered by <%= ver.luciname %> (<%= ver.luciversion %>)<\/a>/OpenWrt_2305_x64_主路由版 by e5sub build @R'"$build_date"'/' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
+sed -i 's|<a href="https://github.com/jerrykuku/luci-theme-argon" target="_blank">ArgonTheme <%# vPKG_VERSION %></a>|<a class="luci-link" href="https://www.yaohst.com" target="_blank">🌐固件编译者：【CAIYA博客】</a>|' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
+sed -i 's|<%= ver.distversion %>|<a href="https://www.yaohst.com" target="_blank">👆点这里下载最新版本</a>|' package/luci-theme-argon/luasrc/view/themes/argon/footer.htm
+sed -i "/<a class=\"luci-link\"/d; /<a href=\"https:\/\/github.com\/jerrykuku\/luci-theme-argon\"/d; s|<%= ver.distversion %>|OpenWrt_2305_x64_主路由版 by e5sub build @R$build_date|" package/luci-theme-argon/luasrc/view/themes/argon/footer_login.htm
 
 # 修改欢迎banner
 cp -f $GITHUB_WORKSPACE/personal/banner package/base-files/files/etc/banner

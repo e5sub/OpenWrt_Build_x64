@@ -1,17 +1,17 @@
 #===============================================
-# Description: OpenWrt_Build_2305_x64_gxnas
+# Description: OpenWrt_Build_2305_x64_e5sub
 # Lisence: MIT
-# By：GXNAS
+# By：e5sub
 #===============================================
 
-name: OpenWrt_Build_2305_x64_gxnas
+name: OpenWrt_Build_2305_x64_e5sub
 
 on:
   repository_dispatch:
   workflow_dispatch:
     inputs:
       checkupdates66:
-        description: '启动OpenWrt_Build_2305_x64_gxnas编译'
+        description: '启动OpenWrt_Build_2305_x64_e5sub编译'
         required: true
         default: 'true'
   schedule:
@@ -21,17 +21,17 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds_config/lede23.feeds.conf.default
-  CONFIG_FILE: config/lede_config/2305_x64_gxnas.config
+  CONFIG_FILE: config/lede_config/2305_x64_e5sub.config
   CONFIGS: config/lede_config
-  DIY_P1_SH: diy_script/lede_diy/x86/2305_x64_gxnas_diy-part1.sh
-  DIY_P2_SH: diy_script/lede_diy/x86/2305_x64_gxnas_diy-part2.sh
+  DIY_P1_SH: diy_script/lede_diy/x86/2305_x64_e5sub_diy-part1.sh
+  DIY_P2_SH: diy_script/lede_diy/x86/2305_x64_e5sub_diy-part2.sh
   CLASH_KERNEL: amd64
   UPLOAD_BIN_DIR: false
   UPLOAD_CONFIG: true
   UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: OpenWrt_2305_x64_gxnas
+  FILE_NAME: OpenWrt_2305_x64_e5sub
   PRODUCT_NAME: x86_64
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
     env:
       REPO_URL_Lede: https://github.com/coolsnowwolf/lede
       REPO_BRANCH_Lede: master
-      REPO_PATH_Lede : "2305_x64_gxnas"
+      REPO_PATH_Lede : "2305_x64_e5sub"
     outputs:
       output: ${{ steps.outputunifreq.outputs.unifreq }}
     steps:
@@ -49,20 +49,20 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL_Lede -b $REPO_BRANCH_Lede $REPO_PATH_Lede
         cd $REPO_PATH_Lede
-        echo "commitHash_2305_x64_gxnas=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        echo "commitHash_2305_x64_e5sub=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
         cd
 
     - name: Show Commit Head and Combination Heads
       id: combHeader
       run: |
-        echo "commitHash_2305_x64_gxnas: ${{ steps.getHash.outputs.commitHash_2305_x64_gxnas }}"
+        echo "commitHash_2305_x64_e5sub: ${{ steps.getHash.outputs.commitHash_2305_x64_e5sub }}"
 
     - name: Compare Commit Hash
       id: cacheHash
       uses: actions/cache@main
       with:
-        path: .commitHash_2305_x64_gxnas
-        key: HEAD-${{ steps.getHash.outputs.commitHash_2305_x64_gxnas }}
+        path: .commitHash_2305_x64_e5sub
+        key: HEAD-${{ steps.getHash.outputs.commitHash_2305_x64_e5sub }}
 
     - name: Set output for next job
       id: outputunifreq
@@ -73,9 +73,9 @@ jobs:
     - name: Save New Commit Hash
       if: steps.cacheHash.outputs.cache-hit != 'true'
       run: |
-        echo ${{ steps.getHash.outputs.commitHash_2305_x64_gxnas }} | tee .commitHash_2305_x64_gxnas
+        echo ${{ steps.getHash.outputs.commitHash_2305_x64_e5sub }} | tee .commitHash_2305_x64_e5sub
 # /////////////////////////////////////////////////////////////////////////////////////////////////////////
-  Build_2305_x64_gxnas:
+  Build_2305_x64_e5sub:
     needs: [CheckRepo]
     if: ${{ needs.CheckRepo.outputs.output != 'hello' || github.event.inputs.checkupdates66 == 'true'}}
     runs-on: ubuntu-22.04
@@ -352,7 +352,7 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}
+          https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}
 
     - name: Push notification upload success
       uses: xhnmt/pushplus-action@main
@@ -371,4 +371,4 @@ jobs:
           - 🔑 默认密码：无密码
           - 🧊 更新时间：${{ env.date }}
           - 🎈 源码哈希值：${{ env.hash }}
-          https://github.com/gxnas/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}
+          https://github.com/e5sub/OpenWrt_Build_x64/releases/tag/${{ env.FILE_NAME }}
